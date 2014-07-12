@@ -1,0 +1,57 @@
+buildscript {
+	ext {
+		springBootVersion = '1.1.1.RELEASE'
+		springLoadedVersion = '1.2.0.RELEASE'
+	}
+	repositories {
+		// NOTE: You should declare only repositories that you need here
+		mavenLocal()
+		mavenCentral()
+		maven { url "http://repo.spring.io/release" }
+		maven { url "http://repo.spring.io/milestone" }
+		maven { url "http://repo.spring.io/snapshot" }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("org.springframework:springloaded:${springLoadedVersion}")
+	}
+}
+
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+mainClassName = "com.coders_kitchen.tyche.Application"
+
+jar {
+	baseName = 'tyche'
+	version = '1.0.0'
+}
+
+sourceCompatibility = '1.7'
+
+repositories {
+	// NOTE: You should declare only repositories that you need here
+	mavenLocal()
+	mavenCentral()
+	maven { url "http://repo.spring.io/release" }
+	maven { url "http://repo.spring.io/milestone" }
+	maven { url "http://repo.spring.io/snapshot" }
+}
+
+dependencies {
+	compile 'org.springframework.boot:spring-boot-starter-thymeleaf',
+			'org.hibernate:hibernate-validator',
+			'org.mongodb:mongo-java-driver:2.12.2',
+			'org.springframework.data:spring-data-mongodb:1.5.0.RELEASE',
+			'org.projectlombok:lombok:1.12.4',
+			'ch.qos.logback:logback-classic:1.1.2'
+
+
+	testCompile 'org.springframework.boot:spring-boot-starter-test',
+			'org.jvnet.mock-javamail:mock-javamail:1.9'
+}
+
+task wrapper(type: Wrapper) { gradleVersion = '1.11' }

@@ -1,0 +1,53 @@
+buildscript {
+	ext {
+		springBootVersion = '1.1.0.BUILD-SNAPSHOT'
+		springLoadedVersion = '1.2.0.RELEASE'
+	}
+	repositories {
+		// NOTE: You should declare only repositories that you need here
+		mavenLocal()
+		mavenCentral()
+		maven { url "http://repo.spring.io/release" }
+		maven { url "http://repo.spring.io/milestone" }
+		maven { url "http://repo.spring.io/snapshot" }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("org.springframework:springloaded:${springLoadedVersion}")
+	}
+}
+
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+mainClassName = "com.coders_kitchen.typhon.Application"
+
+jar {
+	baseName = 'typhon'
+	version = '1.0.0'
+}
+
+repositories {
+	// NOTE: You should declare only repositories that you need here
+	mavenLocal()
+	mavenCentral()
+	maven { url "http://repo.spring.io/release" }
+	maven { url "http://repo.spring.io/milestone" }
+	maven { url "http://repo.spring.io/snapshot" }
+}
+
+dependencies {
+	compile 'org.springframework.boot:spring-boot-starter-web:1.1.0.RELEASE',
+			'org.apache.camel:camel-atom:2.13.1',
+			//'org.apache.camel:camel-spring:2.13.1',
+			//'org.apache.camel:camel-spring-javaconfig:2.13.1'  ,
+			'ch.qos.logback:logback-classic:1.1.2',
+			'org.springframework.hateoas:spring-hateoas:0.12.0.RELEASE',
+			'org.springframework.plugin:spring-plugin-core:1.1.0.RELEASE',
+			'org.projectlombok:lombok:1.12.4'
+
+	testCompile 'org.springframework.boot:spring-boot-starter-test'
+}

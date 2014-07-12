@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>tyntec Online Test Account Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="tyntec Online Test Account Form" />
+        <meta name="keywords" content="tyntec, mobile, ott" />
+       
+		<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+
+        
+        <link rel="stylesheet" type="text/css" href="css/style-formular.css" />
+        <link rel="stylesheet" type="text/css" href="fontello-42c628a4/fontello-42c628a4/css/fontello.css" />
+
+  		<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+  		<script type="text/javascript" src="js/script.js"></script>
+  		
+        
+        
+		<!--[if lt IE 9]>
+			<style>
+				.content{
+					height: auto;
+					margin: 0;
+				}
+				.content div {
+					position: relative;
+				}
+			</style>
+		<![endif]-->
+    </head>
+    <body>
+        <div class="container">
+	
+    			<section class="tabs">
+	            <input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+		        <label for="tab-1" class="tab-label-1">Step 1</label>
+		
+	            <input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+		        <label for="tab-2" class="tab-label-2">Step 2</label>
+
+			    <div class="clear-shadow"></div>
+				
+		        <div class="content">
+                	<!-- ################ CONTENT TAB 1 - begin #################### -->
+			        <div class="content-1">
+						<h2>Configure Your Mobile Outbound SMS (SMS-MT) Test Account</h2>
+                        <h3>tyntec delivers international SMS in a straightforward and reliable fashion, reaching over 90% of all mobile subscribers worldwide.</h3>
+                        <h4>Interconnecting Protocol</h4>
+                        <table>
+                        	<tr>
+                            	<td><p>Protocol</p></td>
+                                <td><select required>
+                                		<option default>Please select</option>
+ 										<option value="SMPP">SMPP</option>
+                                        <option value="SMPP over SSL">SMPP over SSL</option>
+                                        <option value="HTTP">HTTP</option>
+                                        <option value="HTTPS">HTTPS</option>
+                                   </select>
+                                   <a href="#" class="fixedtip" title="Recommended for a mid- to high-level usage (over 100.000 SMS sent / month)"><i class="icon-help"></i></a>
+								</td>
+                            </tr>
+                                                
+                             <tr>
+                            	<td><p>Delivery Receipts URL</p></td>
+                                <td><input class="form" type="text" placeholder="Delivery Receipts URL" onClick="" /><a href="#" class="fixedtip" title="Respond back URL for receiving DLRs (Delivery Receipts)"><i class="icon-help"></i></a></td>
+                             </tr>
+                         </table>
+                         
+                        <h4>HTTP Request Mode</h4>
+                        <table>
+                        	<tr>
+                            	<td><p>Request Mode</p></td>
+                                <td><select required>
+                                		<option default>Please select</option>
+ 										<option value="HTTP POST">HTTP POST</option>
+                                        <option value="HTTP GET">HTTP GET</option>
+                                   </select>
+                                   <a href="#" class="fixedtip" title="Respond back URL for receiving DLRs (Delivery Receipts)"><i class="icon-help"></i></a>                           
+                                </td>
+                                                   
+                             <tr>
+                            	<td><p>Source IP 1</p></td>
+                                <td><input class="form" type="text" placeholder="Source IP 1" onClick="" /><a href="#" class="fixedtip" title="IP address you are using to connect to tyntec"><i class="icon-help"></i></a><a href="#" class="addSource"><img src="images/plus-icon.png" /></a></td>
+                             </tr>
+                             
+                             <!-- ### Soll eingebledet werden sobald man auf "Plus" drückt ### -->
+                             <tr class="newSourceIP">
+                            	<td><p>Source IP2 (Optional)</p></td>
+                                <td><input class="form" type="text" placeholder="Source IP2 (Optional)" onClick="" /><a href="#" class="fixedtip" title="Second IP address you are using to connect to tyntec"><i class="icon-help"></i></a><a href="#" class="removeSource"><img src="images/minus-icon.png" /></a></td>
+                             </tr> 
+                             <!-- ####################################################### -->
+                         </table>
+                         <input type="button" name="nextStep" class="btn" value="Next Step" />
+				    </div>
+                    <!-- ################ CONTENT TAB 1 - end #################### -->
+                    
+                    
+                    
+                    <!-- ################ CONTENT TAB 2 - begin #################### -->
+			        <div class="content-2">
+						<h2>Basic Information</h2>
+                        <table>
+                        	<tr>
+                            	<td><p>First Name</p></td>
+                                <td><input class="form" type="text" name="SMPP" placeholder="First Name" /></td>
+                             </tr>
+                             
+                             <tr>
+                            	<td><p>Last Name</p></td>
+                                <td><input class="form" type="text" placeholder="Last Name" onClick="" /></td>
+                             </tr>
+                             
+                             <tr>
+                            	<td><p>Company</p></td>
+                                <td><input class="form" type="text" placeholder="Company" onClick="" /></td>
+                             </tr>
+                             
+                             <tr>
+                            	<td><p>Email Address</p></td>
+                                <td><input class="form" type="text" placeholder="Email Address" onClick="" /></td>
+                             </tr>
+                             
+                             <tr>
+                            	<td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                             </tr>
+                             
+                             <tr>
+                            	<td><p>I have read and agree to the <a href="#">Terms & Conditions</a></p></td>
+                                <td><div class="customizeCheckbox">
+                                        <input type="checkbox" value="None" id="customizeCheckbox" name="check" />
+                                        <label for="customizeCheckbox"></label>
+                                    </div>
+                                </td>
+                             </tr>
+                             
+                              <tr>
+                            	<td><input type="button" name="nextStep" class="btn" value="Finish" /></td>
+                                <td>&nbsp;</td>
+                             </tr>
+                             
+                         </table>
+                         <input type="button" name="nextStep" class="btn next" value="Finish" />
+				    </div>
+                    <!-- ################ CONTENT TAB 2 - end #################### -->
+		        </div>
+			</section>
+        </div>
+    </body>
+</html>
