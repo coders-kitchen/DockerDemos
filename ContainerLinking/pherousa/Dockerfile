@@ -1,7 +1,12 @@
-FROM tyntec/jdk7
+FROM phusion/baseimage:0.9.10
 
 # Set correct environment variables.
 ENV HOME /root
+
+RUN apt-get update
+RUN apt-get install -y openjdk-7-jre-headless
+
+# Set correct environment variables.
 
 # Regenerate SSH host keys. baseimage-docker does not contain any, so you
 # have to do that yourself. You may also comment out this instruction; the

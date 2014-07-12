@@ -52,11 +52,11 @@ then
 fi
 
 
-echo "Starting a new container of Tyche"
+echo "Starting a new container for Tyche"
 TYCHE=`docker run -d --link mongo:mongodb -v /tmp/dockerDemo:/var/log -p 18080:8080 mr_paeddah/docker_demo_tyche:1.0`
 
 echo 
-echo "Starting a new container of Pherousa"
+echo "Starting a new container for Pherousa"
 PHEROUSA=`docker run -d --link mongo:mongodb --link atom:atom -v /tmp/dockerDemo:/var/log -p 18081:18081 mr_paeddah/docker_demo_pherousa:1.0`
 
 echo
@@ -66,7 +66,9 @@ echo "Pherousa is accessible via http://localhost:18081"
 echo "AtomHopper is accessible via http://localhost:18082/atomhopper/bookorder/feed"
 echo "MongoDb is accessible via localhost:27017"
 
-echo "Starting Typhon .. please take a look at the console output after creating a new book order"
+echo "Logfiles of Tyche and Pherousa are available at /tmp/dockerDemo"
+
+echo "Starting Typhon .. please take into /tmp/Typhon.log to see what happens"
 Typhon/gradlew -b Typhon/build.gradle -q clean boRu
 
 echo "Shutdown"
