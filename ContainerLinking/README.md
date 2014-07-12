@@ -3,6 +3,11 @@ ContainerLinking
 
 This demo show how to link multiple containers and how to use a directory on the host to store some information.
 
+Requirements
+--
+
+  * JDK 7+
+
 Usecase
 --
 
