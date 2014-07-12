@@ -13,7 +13,7 @@ import java.util.Properties;
 
 public class BookTest {
 
-	public static final String IMAGE_NAME = "paintedfox/postgresql";
+	public static final String IMAGE_NAME = "unittest/postgresql";
 
 	@Test
 	public void testSomeLibraryMethod() throws Exception {
