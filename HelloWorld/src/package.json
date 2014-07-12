@@ -1,0 +1,10 @@
+	{
+	  "name": "dockerfile_node_js_demo",
+	  "private": true,
+	  "version": "0.0.1",
+	  "description": "Node.js Hello World - Created interactive",
+	  "author": "Peter Daum",
+	  "dependencies": {
+	    "express": "3.2.4"
+	  }
+	}
