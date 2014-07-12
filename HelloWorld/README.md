@@ -10,7 +10,7 @@ Change into HelloWorld's directory
 
 Execute
 
-  docker build -t helloWorldDemo .
-  docker run -d helloworldDemo
+    docker build -t helloWorldDemo .
+    docker run -d helloworldDemo
   
 Open http://localhost:8080 in your browser
